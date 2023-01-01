@@ -1,0 +1,45 @@
+{
+    "test_name": "25_percent_shabari",
+    "test_duration_in_seconds": 100,
+    "random_seed": 100,
+    "blocking_cli": false,
+    "endpoint": "local_openwhisk",
+    "instances": {
+        "instance1": {
+            "application": "matmult",
+            "distribution": "Poisson",
+            "rate": 0.25,
+            "activity_window": [
+                0,
+                100
+            ]
+        },
+        "instance2": {
+            "application": "linpack",
+            "distribution": "Uniform",
+            "rate": 0.25,
+            "activity_window": [
+                0,
+                100
+            ]
+        },
+        "instance3": {
+            "application": "image-process",
+            "distribution": "Uniform",
+            "rate": 0.25,
+            "activity_window": [
+                0,
+                100
+            ]
+        },
+        "instance4": {
+            "application": "encrypt",
+            "distribution": "Poisson",
+            "rate": 0.25,
+            "activity_window": [
+                0,
+                100
+            ]
+        }
+    }
+}
